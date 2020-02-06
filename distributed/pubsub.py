@@ -184,7 +184,7 @@ class PubSubClientExtension:
 
         if not self.subscribers[name]:
             self.client.scheduler_comm.send(
-                {"op": "pubsub-remove-subscribers", "name": name}
+                {"op": "pubsub-remove-subscriber", "name": name}
             )
 
     def trigger_cleanup(self):
